@@ -1,0 +1,32 @@
+﻿@*
+	COMENTARIOS EN RAZOR
+*@
+
+DECLARACION DE VARIABLES A NIVEL DE PAGINA
+@{
+	//VARIABLES LOCALES DE PAGINA 
+	//TODO ESTO ES CODIGO C#
+	int valor = 14;
+	string texto = "Hoy es lunes";
+	valor += 1;
+	texto = texto.ToUpper();
+}
+
+DIBUJAR VARIABLES
+<h2 style="color: red">Texto @texto, Numero: @valor</h2>
+
+CODIGO LOGICO (CONDICIONES Y BUCLES)
+@if (valor >= 0)
+{
+	//CODIGO C#
+	texto = "POSITIVO";
+	<h2 style="color: lightcoral">@texto</h2>
+}
+
+else
+{
+	texto = "NEGATIVO";
+	<h2 style="color: lightgreen">@texto</h2>
+}
+
+<h1>HOLAALAAAA</h1>

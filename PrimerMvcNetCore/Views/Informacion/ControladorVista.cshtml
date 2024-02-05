@@ -1,0 +1,13 @@
+﻿@model Persona
+
+<h1>Infor controlador --> Vista</h1>
+<h3 style="color: lightpink">Nombre @ViewData["NOMBRE"]</h3>
+<h3 style="color: lightpink">Edad: @ViewData["EDAD"]</h3>
+<h3 style="color: lightpink">Edad: @ViewBag.EDAD</h3>
+<h3 style="color: lightskyblue">Dia Semana: @ViewData["DIASEMANA"]</h3>
+<h3 style="color: lightskyblue">Dia Semana: @ViewBag.DiaSemana</h3>
+
+
+<h2 style="color: lightcoral; background-color: black">
+	@Model.Nombre, @Model.Email, @Model.Edad
+</h2>

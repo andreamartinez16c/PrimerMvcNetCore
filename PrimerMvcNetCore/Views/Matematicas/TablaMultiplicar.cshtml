@@ -1,0 +1,37 @@
+﻿@model List<int>
+
+<h1>Tabla Multipliar</h1>
+<form method="post">
+	<label>Introduzca numero:</label>
+	<input type="number" name="numero" class="form-control" />
+
+	<button class="btn btn-warning">Multiplicar</button>
+</form>
+<hr />
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Número</th>
+                @foreach (var num in Model)
+                {
+                    <th>@num</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 1; i <= 10; i++)
+            {
+                <tr>
+                    <td>@i</td>
+                    @foreach (var num in Model)
+                    {
+                        <td>@(i * num)</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
